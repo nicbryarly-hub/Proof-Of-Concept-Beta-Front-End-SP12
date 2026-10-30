@@ -1,0 +1,86 @@
+.title{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.Workspace{
+  display: flex;
+  gap: 24px;
+}
+/*Left hand sign for mediaupload*/
+.MediaSpace{
+  border: 4px solid darkblue;
+  width: 30%;
+  border-radius:12px;
+  align-self: flex-start;
+}
+.Media-List {
+  display: flex;
+  flex-direction: column;
+  gap:2px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.Media-List button{
+  height: 34px;
+  flex-shrink: 0;
+  border: 3px solid lightblue;
+  border-radius: 5px;
+}
+
+
+/*Right hand side for media preview*/
+/*Colum include the module count and preview box*/
+.Preview-Column{
+    width: 60%;
+    position: relative;
+}
+
+.Preview-Column > label {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 8px;
+}
+
+/*everything on the right hand side right now besides the module count*/
+.PreviewSpace{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  border: 4px solid darkblue;
+  border-radius: 12px;
+
+}
+
+
+.PreviewSpace img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-sizing:border-box;
+  display:block;
+  /*border: 3px dotted yellowgreen;*/
+}
+
+
+/*This is the image and the grid*/
+.Image-Wrap{
+  position: relative;
+  border: 2px dashed lightblue;
+  border-radius: 12px;
+  box-sizing: border-box;
+  /*border:10px solid lightblue;*/
+}
+
+.Grid-Overlay{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+  linear-gradient(to right, black 1px, transparent 1px),
+  linear-gradient(to bottom, black 1px, transparent 1px);
+  clip-path: inset(1px);
+  box-sizing: border-box;
+}
